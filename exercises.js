@@ -11,8 +11,8 @@ function firstReverse(str){
         return null
     } else {
         var makeArr = str.split('');
-        var sortArr = makeArr.reverse();
-        var makeStr = sortArr.join('');
+        var revArr = makeArr.reverse();
+        var makeStr = revArr.join('');
     }
     return makeStr;
 }
@@ -25,6 +25,17 @@ function firstReverse(str){
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+
+ function alphaOrder(str){
+     if (typeof str !== 'string'){
+         return null;
+     } else {
+         var makeArr = str.split('');
+         var sortArr = makeArr.sort();
+         var makeStr = sortArr.join('')
+     }
+     return makeStr
+ }
 
 
 
@@ -71,7 +82,7 @@ function firstReverse(str){
 
 module.exports = {
     firstReverse: firstReverse,
-    alphaOrder: null,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
