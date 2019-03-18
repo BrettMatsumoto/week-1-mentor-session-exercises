@@ -6,6 +6,18 @@
  * ie: "cat" => "tac"
  */
 
+function firstReverse(str){
+    if (typeof str !== 'string'){
+        return null
+    } else {
+        var makeArr = str.split('');
+        var sortArr = makeArr.reverse();
+        var makeStr = sortArr.join('');
+    }
+    return makeStr;
+}
+ 
+
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
  * return the string in alphabetical order
@@ -13,6 +25,8 @@
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+
+
 
  /** Function: vowelCount
  * The function will take the num parameter being passed in and
@@ -56,7 +70,7 @@
  */
 
 module.exports = {
-    firstReverse: null,
+    firstReverse: firstReverse,
     alphaOrder: null,
     vowelCount: null,
     timeConvert: null,
