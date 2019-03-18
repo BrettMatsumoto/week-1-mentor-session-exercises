@@ -74,6 +74,16 @@ function firstReverse(str){
  * @return {string} as hours:minutes
  * ie: 68 => 1:8
  */
+function timeConvert(str){
+    if (typeof str !== 'number'){
+        return null;
+    } else {
+    var minutes = str%60;
+    var hours = (str - minutes)/60;
+    var time = hours + ':' + minutes;
+    }
+    return time;
+}
 
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
@@ -103,6 +113,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 }
