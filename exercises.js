@@ -47,6 +47,25 @@ function firstReverse(str){
  * ie: "oreo" => 3
  */
 
+ function vowelCount(num){
+     var vowels = 0;
+     var nonVowels = 0;
+     if (typeof num !== 'string'){
+         return null;
+     } else {
+        var lowerCase = num.toLowerCase()
+        var makeArr = lowerCase.split('');
+        for (var i = 0;i<makeArr.length - 1;i++){
+            if (makeArr[i] === 'a' || 'e' || 'i' || 'o' || 'u'){
+                vowels++
+            } else {
+                nonVowels++
+            }
+        }
+     }
+     return vowels;
+ }
+
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
  * return the number of hours and minutes. Seperate the number of hours
@@ -83,7 +102,7 @@ function firstReverse(str){
 module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
-    vowelCount: null,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
